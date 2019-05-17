@@ -1,4 +1,4 @@
-<h1>Ingrédients de <%= @cocktail.name %></h1>
+<h1 class ="title">Ingrédients pour un <%= @cocktail.name %></h1>
 
 <ul>
   <% @cocktail.ingredients.each do |ingredient| %>
@@ -8,4 +8,4 @@
   <% end %>
 </ul>
 
-  <h1> <%= link_to 'back index', cocktails_path %></h1>
+  <h3> <%= link_to 'back to index', cocktails_path %></h3>
