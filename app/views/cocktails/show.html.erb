@@ -1,4 +1,4 @@
-<h1 class ="title">Ingrédients pour un <%= @cocktail.name %></h1>
+<h1 class="title">Ingrédients pour un <%= @cocktail.name %></h1>
 
 <ul>
   <% @cocktail.ingredients.each do |ingredient| %>
@@ -8,4 +8,11 @@
   <% end %>
 </ul>
 
-  <h3> <%= link_to 'back to index', cocktails_path %></h3>
+<h3> <%= link_to 'back to index', cocktails_path %></h3>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit %>
+<% end %>
+
